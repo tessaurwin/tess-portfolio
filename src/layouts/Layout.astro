@@ -1,23 +1,33 @@
+k---
+import '../styles/global.css';
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Tess Urwin</title>
+  </head>
+
+  <body class="min-h-screen bg-white text-zinc-900">
+    <nav class="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
+      <a class="font-semibold" href="/">Tess Urwin</a>
+      <div class="flex gap-4 text-sm text-zinc-700">
+        <a class="hover:underline" href="/about">About</a>
+        <a class="hover:underline" href="/projects">Projects</a>
+        <a class="hover:underline" href="/resume">Resume</a>
+        <a class="hover:underline" href="/updates">Updates</a>
+        <a class="hover:underline" href="/contact">Contact</a>
+      </div>
+    </nav>
+
+    <main class="mx-auto max-w-3xl px-6">
+      <slot />
+    </main>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
