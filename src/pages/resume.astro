@@ -1,25 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const resumeUrl = Astro.resolve("/resume.pdf");
+
+const resumeUrl = new URL("resume.pdf", Astro.url).toString();
 ---
 
 <Layout>
   <section class="py-12">
-    <h1 class="text-3xl font-semibold tracking-tight">Resume</h1>
-    <p class="mt-2 text-zinc-600">View or download my resume as a PDF.</p>
+    ...
+    <a href={resumeUrl} target="_blank">Open PDF</a>
+    <a href={resumeUrl} download>Download</a>
 
-    <div class="mt-6 flex gap-3">
-      <a class="rounded-xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800" href={resumeUrl} target="_blank">
-        Open PDF
-      </a>
-      <a class="rounded-xl border border-zinc-200 px-4 py-2 text-sm font-medium hover:border-zinc-300" href={resumeUrl} download>
-        Download
-      </a>
-    </div>
-
-    <div class="mt-8 overflow-hidden rounded-2xl border border-zinc-200">
-      <iframe class="h-[900px] w-full" src={resumeUrl}></iframe>
-    </div>
+    <iframe src={resumeUrl} class="h-[900px] w-full"></iframe>
   </section>
 </Layout>
 

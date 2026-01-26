@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -7,23 +7,24 @@ import '../styles/global.css';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href={new URL("favicon.svg", Astro.url)} />
+    <link rel="icon" href={new URL("favicon.ico", Astro.url)} />
     <meta name="generator" content={Astro.generator} />
     <title>Tess Urwin</title>
   </head>
 
   <body class="min-h-screen bg-white text-zinc-900">
-    <nav class="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
-      <a class="font-semibold" href="/">Tess Urwin</a>
-      <div class="flex gap-4 text-sm text-zinc-700">
-        <a class="hover:underline" href="/about">About</a>
-        <a class="hover:underline" href="/projects">Projects</a>
-        <a class="hover:underline" href="/resume">Resume</a>
-        <a class="hover:underline" href="/updates">Updates</a>
-        <a class="hover:underline" href="/contact">Contact</a>
-      </div>
-    </nav>
+<nav class="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
+  <a class="font-semibold" href={new URL("", Astro.url)}>Tess Urwin</a>
+
+  <div class="flex gap-4 text-sm text-zinc-700">
+    <a class="hover:underline" href={new URL("about", Astro.url)}>About</a>
+    <a class="hover:underline" href={new URL("projects", Astro.url)}>Projects</a>
+    <a class="hover:underline" href={new URL("resume", Astro.url)}>Resume</a>
+    <a class="hover:underline" href={new URL("updates", Astro.url)}>Updates</a>
+    <a class="hover:underline" href={new URL("contact", Astro.url)}>Contact</a>
+  </div>
+</nav>
 
     <main class="mx-auto max-w-3xl px-6">
       <slot />
