@@ -1,11 +1,58 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+k---
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <section class="py-16">
+    <h1 class="text-4xl font-semibold tracking-tight">
+      Tess Urwin
+    </h1>
+
+    <p class="mt-4 text-lg text-zinc-600 max-w-2xl">
+      Electrical & Computer Engineer focused on embedded systems, digital design, VLSI, and robotics R&amp;D.
+      I like building reliable hardware-software systems and documenting what I learn.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a
+        class="rounded-xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+        href="/projects"
+      >
+        View Projects
+      </a>
+
+      <a
+        class="rounded-xl border border-zinc-200 px-4 py-2 text-sm font-medium hover:border-zinc-300"
+        href="/resume"
+      >
+        Resume
+      </a>
+
+      <a
+        class="rounded-xl border border-zinc-200 px-4 py-2 text-sm font-medium hover:border-zinc-300"
+        href="/contact"
+      >
+        Contact
+      </a>
+    </div>
+
+    <div class="mt-10 grid gap-4 sm:grid-cols-2">
+      <div class="rounded-2xl border border-zinc-200 p-5">
+        <h2 class="text-sm font-semibold text-zinc-900">Currently</h2>
+        <p class="mt-2 text-sm text-zinc-600">
+          MS ECE @ UIC • Digital Systems / VLSI track • Building a stronger embedded + HDL portfolio.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-zinc-200 p-5">
+        <h2 class="text-sm font-semibold text-zinc-900">Highlights</h2>
+        <ul class="mt-2 space-y-1 text-sm text-zinc-600 list-disc pl-5">
+          <li>FireBot sensor R&amp;D (robotics + embedded)</li>
+          <li>FPGA / Verilog projects</li>
+          <li>Electronics prototyping &amp; validation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </Layout>
 
