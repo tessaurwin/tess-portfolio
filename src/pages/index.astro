@@ -1,6 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
 const BASE_URL = import.meta.env.BASE_URL;
+const projects = (await getCollection("projects"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 2);
 ---
 
 <Layout>
@@ -44,5 +49,22 @@ const BASE_URL = import.meta.env.BASE_URL;
       </div>
     </div>
   </section>
+
+  <section class="mt-12">
+    <h2 class="text-sm font-semibold text-zinc-900">Featured projects</h2>
+
+    <div class="mt-4 grid gap-4">
+      {projects.map((p) => (
+        <a
+          class="rounded-2xl border border-zinc-200 p-5 hover:border-zinc-300"
+          href={`${BASE_URL}projects/${p.slug}/`}
+        >
+          <div class="font-semibold">{p.data.title}</div>
+          <p class="mt-2 text-sm text-zinc-600">{p.data.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
 </Layout>
 
