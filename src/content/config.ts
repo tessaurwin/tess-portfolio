@@ -9,6 +9,8 @@ const projects = defineCollection({
 
     tags: z.array(z.string()).default([]),
 
+    featured: z.boolean().optional(),
+    thumbnail: z.string().optional(),
     repo: z.string().url().optional(),
     demo: z.string().url().optional(),
 
