@@ -1,27 +1,61 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const BASE_URL = import.meta.env.BASE_URL;
 ---
 
 <Layout>
   <section class="py-12">
     <h1 class="text-3xl font-semibold tracking-tight">About</h1>
 
-    <p class="mt-4 text-zinc-600">
-      I’m Tessa — an Electrical & Computer Engineer focused on embedded systems, digital system design, FPGA/RTL Design, and VLSI.
-      I’m currently in the MS ECE program at The University of Illinois at Chicago (Digital Systems / VLSI track) with an expected graduation date of Spring 2027.
-    </p>
+    <div class="mt-8 grid gap-10 lg:grid-cols-2 items-start">
+      <div>
+        <p class="text-zinc-600">
+          I’m Tessa — an Electrical & Computer Engineer focused on embedded systems, digital system design, FPGA/RTL Design, and VLSI.
+          I’m currently in the MS ECE program at The University of Illinois at Chicago (Digital Systems / VLSI track) with an expected graduation date of Spring 2027.
+        </p>
 
-    <div class="mt-6 space-y-3 text-zinc-600">
-      <p>
-         In 2024, I earned my BS in ECE from The University of Texas at Austin where I specialized in computer architecture and embedded systems.
-      </p>
-      <p>
-        I like building reliable hardware-software systems, getting deep into debugging, and documenting what I learn.
-      </p>
-      <p>
-        Interests: firmware, RTL/FPGA, sensor systems, and design verification.
-      </p>
+        <div class="mt-6 space-y-3 text-zinc-600">
+          <p>
+            In 2024, I earned my BS in ECE from The University of Texas at Austin where I specialized in computer architecture and embedded systems.
+          </p>
+          <p>
+            I like building reliable hardware-software systems, getting deep into debugging, and documenting what I learn.
+          </p>
+          <p>
+            Interests: firmware, RTL/FPGA, sensor systems, and design verification.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-2 card p-0 overflow-hidden">
+          <img
+            src={`${BASE_URL}images/about/apple-headshot.jpeg`}
+            alt="Tessa portrait"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="card p-0 overflow-hidden">
+          <img
+            src={`${BASE_URL}images/about/grad-headshot.jpeg`}
+            alt="Graduation headshot"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="card p-0 overflow-hidden">
+          <img
+            src={`${BASE_URL}images/about/commencement-photo.jpeg`}
+            alt="Commencement photo"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
-

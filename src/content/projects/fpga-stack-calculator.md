@@ -1,7 +1,7 @@
 ---
-title: Project Title
+title: FPGA Stack Calculator
 date: 2025-01-01
-summary: summary
+summary: "16-bit stack-based calculator in Verilog with keypad input, VGA output, and a clean testbench."
 repo: https://github.com/...
 tags: [fpga, verilog, embedded]
 ---
