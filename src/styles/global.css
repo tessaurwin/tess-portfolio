@@ -1,1 +1,65 @@
 @import "tailwindcss";
+
+/* === Phase 1: Tess "Option A" component styles === */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transition-all
+      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-zinc-900 text-white shadow-sm hover:bg-zinc-800 hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply border border-zinc-200 text-zinc-900 hover:border-rose-300 hover:bg-rose-50;
+  }
+
+  /* Updated: nicer hover + slightly softer border */
+  .card {
+    @apply rounded-2xl border border-zinc-200/80 bg-white p-5 shadow-sm transition-all
+      hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-md;
+  }
+
+  .section-title {
+    @apply text-sm font-semibold text-rose-400 tracking-wide uppercase;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-rose-200 bg-rose-50 px-2 py-0.5 text-xs text-rose-600;
+  }
+
+  .link {
+    @apply text-sm text-zinc-600 underline-offset-4 hover:underline hover:text-zinc-900;
+  }
+
+  /* NEW: background wash for the whole site */
+  .page-bg {
+    @apply bg-gradient-to-b from-rose-50/40 via-white to-white;
+  }
+
+  /* NEW: pink glow blob */
+  .hero-glow {
+    @apply pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full
+      bg-gradient-to-br from-rose-200/60 via-rose-100/40 to-transparent blur-3xl;
+  }
+
+  /* NEW: faint grid texture (optional but very “engineer core”) */
+  .subtle-grid {
+    @apply pointer-events-none absolute inset-0 opacity-[0.06];
+    background-image: linear-gradient(to right, rgb(24 24 27) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(24 24 27) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(244, 63, 94, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(244, 63, 94, 0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: top left;
+  }
+}
+

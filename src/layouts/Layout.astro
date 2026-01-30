@@ -2,6 +2,7 @@
 import "../styles/global.css";
 
 const BASE_URL = import.meta.env.BASE_URL; // e.g. "/tess-portfolio/"
+const { title = "Tess Urwin" } = Astro.props;
 ---
 
 <!doctype html>
@@ -14,25 +15,44 @@ const BASE_URL = import.meta.env.BASE_URL; // e.g. "/tess-portfolio/"
     <link rel="icon" href={`${BASE_URL}favicon.ico`} />
 
     <meta name="generator" content={Astro.generator} />
-    <title>Tess Urwin</title>
+    <title>{title}</title>
   </head>
 
-  <body class="min-h-screen bg-white text-zinc-900">
-    <nav class="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
-      <a class="font-semibold" href={BASE_URL}>Tess Urwin</a>
+  <body class="min-h-screen bg-white text-zinc-900 bg-grid">
+    <header class="sticky top-0 z-40">
+      <nav class="mx-auto max-w-4xl px-6 py-5">
+        <div class="rounded-2xl border border-zinc-200 bg-white/80 backdrop-blur shadow-sm px-4 py-3 flex items-center justify-between">
+          <a class="font-semibold transition-colors hover:text-rose-500" href={BASE_URL}>
+            Tess Urwin
+          </a>
 
-      <div class="flex gap-4 text-sm text-zinc-700">
-        <a class="hover:underline" href={`${BASE_URL}about/`}>About</a>
-        <a class="hover:underline" href={`${BASE_URL}projects/`}>Projects</a>
-        <a class="hover:underline" href={`${BASE_URL}resume/`}>Resume</a>
-        <a class="hover:underline" href={`${BASE_URL}updates/`}>Updates</a>
-        <a class="hover:underline" href={`${BASE_URL}contact/`}>Contact</a>
-      </div>
-    </nav>
+          <div class="flex gap-4">
+            <a class="link" href={`${BASE_URL}about/`}>About</a>
+            <a class="link" href={`${BASE_URL}projects/`}>Projects</a>
+            <a class="link" href={`${BASE_URL}resume/`}>Resume</a>
+            <a class="link" href={`${BASE_URL}updates/`}>Updates</a>
+            <a class="link" href={`${BASE_URL}contact/`}>Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    <main class="mx-auto max-w-3xl px-6">
+    <main class="mx-auto max-w-4xl px-6">
       <slot />
     </main>
+
+    <footer class="mx-auto max-w-4xl px-6 py-12 text-sm text-zinc-500">
+      <div class="rounded-2xl border border-zinc-200 bg-white/70 backdrop-blur px-5 py-4 shadow-sm">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div>© {new Date().getFullYear()} Tess Urwin</div>
+          <div class="flex gap-4">
+            <a class="link" href={`${BASE_URL}resume/`}>Resume</a>
+            <a class="link" href="https://github.com/tessaurwin" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="link" href="https://www.linkedin.com/in/tessa-urwin/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
 

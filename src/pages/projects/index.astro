@@ -2,11 +2,13 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const projects = (await getCollection("projects"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<Layout>
+<Layout title="Projects • Tess Urwin">
   <section class="py-12">
     <h1 class="text-3xl font-semibold tracking-tight">Projects</h1>
     <p class="mt-2 text-zinc-600">A running list of what I’ve built and learned.</p>
@@ -14,11 +16,29 @@ const projects = (await getCollection("projects"))
     <ul class="mt-8 space-y-4">
       {projects.map((p) => (
         <li class="rounded-2xl border border-zinc-200 p-5 hover:border-zinc-300">
-          <a class="text-lg font-medium underline-offset-4 hover:underline" href={`/projects/${p.slug}/`}>
-            {p.data.title}
+          <a
+            class="block"
+            href={`${BASE_URL}projects/${p.slug}/`}
+          >
+            <div class="flex gap-4">
+              {p.data.heroImage && (
+                <img
+                  src={`${BASE_URL}${p.data.heroImage}`}
+                  alt={`${p.data.title} thumbnail`}
+                  class="h-16 w-16 rounded-xl object-cover border border-zinc-200"
+                  loading="lazy"
+                />
+              )}
+
+              <div>
+                <div class="text-lg font-medium underline-offset-4 hover:underline">
+                  {p.data.title}
+                </div>
+                {p.data.summary && <p class="mt-2 text-zinc-700">{p.data.summary}</p>}
+                <p class="mt-2 text-sm text-zinc-500">{p.data.date.toDateString()}</p>
+              </div>
+            </div>
           </a>
-          {p.data.summary && <p class="mt-2 text-zinc-700">{p.data.summary}</p>}
-          <p class="mt-2 text-sm text-zinc-500">{p.data.date.toDateString()}</p>
         </li>
       ))}
     </ul>
