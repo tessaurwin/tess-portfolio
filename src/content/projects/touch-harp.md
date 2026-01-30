@@ -1,7 +1,7 @@
 ---
 title: Project Title
 date: 2025-01-01
-summary: 1–2 sentence punchy summary.
+summary: summary
 repo: https://github.com/...
 tags: [fpga, verilog, embedded]
 ---
