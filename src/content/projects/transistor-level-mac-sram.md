@@ -1,7 +1,7 @@
 ---
 title: "Transistor-Level MAC Datapath & SRAM Design"
 slug: "transistor-level-mac-sram"
-date: 2025-12-01
+date: 2025-12-12
 summary: "Full custom transistor-level MAC datapath + SRAM system designed in Cadence Virtuoso for graduate VLSI coursework."
 tags: ["VLSI", "Cadence", "SRAM", "MAC", "Custom CMOS", "Digital Design"]
 featured: true

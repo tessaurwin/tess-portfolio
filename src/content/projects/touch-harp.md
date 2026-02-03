@@ -1,7 +1,7 @@
 ---
-title: Project Title
-date: 2025-01-01
-summary: summary
+title: Capacitive Touch Harp
+date: 2023-12-01
+summary: summary in progress
 repo: https://github.com/...
 tags: [fpga, verilog, embedded]
 ---
