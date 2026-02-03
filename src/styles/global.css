@@ -55,3 +55,94 @@
     background-position: top left;
   }
 }
+
+@layer components {
+  /* Markdown / project body formatting */
+  .markdown {
+    @apply text-zinc-800 leading-relaxed;
+  }
+
+  .markdown :is(h1, h2, h3) {
+    @apply font-semibold tracking-tight text-zinc-900;
+  }
+
+  .markdown h1 {
+    @apply mt-10 mb-4 text-2xl;
+  }
+
+  .markdown h2 {
+    @apply mt-10 mb-4 text-xl;
+  }
+
+  .markdown h3 {
+    @apply mt-8 mb-3 text-lg;
+  }
+
+  .markdown p {
+    @apply my-4;
+  }
+
+  .markdown ul {
+    @apply my-4 list-disc pl-6;
+  }
+
+  .markdown ol {
+    @apply my-4 list-decimal pl-6;
+  }
+
+  .markdown li {
+    @apply my-2;
+  }
+
+  .markdown li > ul,
+  .markdown li > ol {
+    @apply mt-2;
+  }
+
+  .markdown a {
+    @apply underline underline-offset-4 decoration-zinc-300 hover:decoration-rose-300;
+  }
+
+  .markdown strong {
+    @apply font-semibold text-zinc-900;
+  }
+
+  .markdown hr {
+    @apply my-10 border-zinc-200;
+  }
+
+  /* === Markdown formatting === */
+  .markdown {
+    @apply text-zinc-800 leading-relaxed;
+  }
+
+  /* Headings */
+  .markdown :is(h1, h2, h3) {
+    @apply font-semibold tracking-tight text-zinc-900;
+  }
+
+  .markdown h1 { @apply mt-10 mb-4 text-2xl; }
+  .markdown h2 { @apply mt-10 mb-4 text-xl; }
+  .markdown h3 { @apply mt-8 mb-3 text-lg; }
+
+  /* Paragraph spacing */
+  .markdown p { @apply my-4; }
+
+  /* Lists */
+  .markdown ul { @apply my-4 list-disc pl-6; }
+  .markdown ol { @apply my-4 list-decimal pl-6; }
+  .markdown li { @apply my-2; }
+
+  /* Nested lists */
+  .markdown li > ul,
+  .markdown li > ol { @apply mt-2; }
+
+  /* Links + emphasis */
+  .markdown a {
+    @apply underline underline-offset-4 decoration-zinc-300 hover:decoration-rose-300;
+  }
+  .markdown strong { @apply font-semibold text-zinc-900; }
+
+  /* Optional: horizontal rules if you ever use them */
+  .markdown hr { @apply my-10 border-zinc-200; }
+}

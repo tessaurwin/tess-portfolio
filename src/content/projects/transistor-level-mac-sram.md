@@ -30,41 +30,27 @@ docs:
 ---
 
 # Overview
-<br>
-This project is a **full custom, transistor-level MAC datapath with integrated SRAM**, built for **ECE 467 – Introduction to VLSI** during my first semester in the MS ECE program at UIC.
-<br>
-Everything was designed directly in **Cadence Virtuoso** at the schematic level — not HDL, not behavioral models, not RTL abstraction. Logic gates, arithmetic blocks, memory cells, decoders, and buffers were all built from transistor primitives, simulated, and then composed into a complete working system.
-<br>
-The goal wasn’t performance tuning or optimization — it was learning how real full-custom CMOS design actually works: building systems bottom-up, validating them through simulation, and integrating logic, memory, and datapath structures into a real architecture.
-<br>
-At a high level, the system includes:
 
-<ul>
-  <li>Custom transistor-level logic gate library</li>
-  <li>Arithmetic blocks (adders + multiplier)</li>
-  <li>SRAM memory structures</li>
-  <li>Decoder and control logic</li>
-  <li>Signal routing and buffering circuits</li>
-</ul>
+This project is a **full custom, transistor-level MAC datapath with integrated SRAM**, built for **ECE 467 Introduction to VLSI** during my first semester in the MS ECE program at UIC.
 
-<br><br>
+Everything was designed directly in **Cadence Virtuoso** at the schematic level. Logic gates, arithmetic blocks, memory cells, decoders, and buffers were all built from transistor primitives, simulated, and then composed into a complete working system.
+
+The goal wasn’t performance tuning or optimization - it was learning how real full-custom CMOS design actually works: building systems bottom-up, validating them through simulation, and integrating logic, memory, and datapath structures into a real architecture.
 
 # System Structure
-<br>
+
 At a high level, the system is made up of several independently designed blocks that were later integrated into a single datapath:
 
-- Transistor-level logic gate library  
-- Arithmetic blocks (adders and multiplier)  
-- SRAM memory structures  
-- Decoder and control logic  
-- Signal routing and buffering circuits  
+- Custom transistor-level logic gate library
+- Arithmetic blocks (adders + multiplier)
+- SRAM memory structures
+- Decoder and control logic
+- Signal routing and buffering circuits 
 
 Each block was designed, simulated, and verified on its own before being hierarchically integrated into the full system.
 
-<br>
-
 # MAC Datapath
-<br>
+
 The MAC datapath is built from reusable transistor-level building blocks that form a simple arithmetic pipeline.
 
 It is composed of:
@@ -74,10 +60,8 @@ It is composed of:
 
 All arithmetic structures were implemented directly at the transistor level and validated through schematic-level simulation.
 
-<br>
-
 # Memory System
-<br>
+
 The memory subsystem is fully custom and transistor-accurate.
 
 It includes:
@@ -86,15 +70,11 @@ It includes:
 
 These components were designed and validated independently, then integrated into the datapath.
 
-<br>
-
 # Signal Conditioning
-<br>
+
 To support signal integrity and timing stability, the system includes a custom inverter chain used for buffering and propagation control across the datapath.
 
 This helps manage loading effects and signal degradation between blocks.
-
-<br>
 
 # Design Approach
 
@@ -108,8 +88,6 @@ This project followed a full-custom VLSI workflow:
 
 All validation was performed at the schematic level using circuit simulation — not behavioral modeling.
 
-<br>
-
 # Validation
 
 All subsystems were verified through simulation, including:
@@ -122,8 +100,6 @@ All subsystems were verified through simulation, including:
 
 Timing and validation results are documented in the final report.
 
-<br>
-
 # Documentation
 
 **Final Report**  
@@ -132,8 +108,6 @@ Timing and validation results are documented in the final report.
 **Project Presentation**  
 [Download Presentation (PDF)](/docs/projects/mac-sram/presentation.pdf)
 
-<br>
-
 # Context
 
 **Course:** ECE 467 – Introduction to VLSI  
@@ -141,11 +115,9 @@ Timing and validation results are documented in the final report.
 **Term:** Fall 2025  
 **Tool:** Cadence Virtuoso  
 
-<br>
+# Personal Impact
 
-# Why This Project Matters
-
-This was my first real transistor-level system design project — not abstract logic, not HDL, not blocks on a diagram. Actual devices, actual circuits, actual integration.
+This was my first real transistor-level system design project - not abstract logic, not HDL, not blocks on a diagram. Actual devices, actual circuits, actual integration.
 
 It taught me how digital systems are actually built:
 - bottom-up from devices  
@@ -153,4 +125,4 @@ It taught me how digital systems are actually built:
 - composed hierarchically  
 - and integrated into real architectures  
 
-This is the kind of foundation used in ASIC design, memory systems, and custom digital IC work — and it’s one of the projects that pushed me toward VLSI as a focus area.
+This is the kind of foundation used in ASIC design, memory systems, and custom digital IC work, and it’s one of the projects that pushed me toward VLSI as a focus area.
