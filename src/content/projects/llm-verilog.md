@@ -3,9 +3,9 @@ title: "Fine-Tuning a Lightweight LLM for Verilog Code Generation"
 slug: "llm-verilog-generation"
 date: 2025-12-02
 summary: "Evaluated and fine-tuned a TinyLlama (1.1B) model with LoRA to improve Verilog HDL generation, validated using Verible, Verilator, Yosys, and randomized testbenches."
-heroImage: "images/projects/llm-verilog/lora-llm-results.png"
+heroImage: "images/projects/llm-verilog/tiny-llama.png"
 tags: ["Digital Design", "Verilog", "LLMs", "LoRA", "ML for Hardware"]
-
+repo: "https://github.com/tessaurwin/hdlgen"
 ---
 
 # Overview
