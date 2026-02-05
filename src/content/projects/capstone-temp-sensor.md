@@ -1,5 +1,5 @@
 ---
-title: "Temperature Sensor for Veterans with Paralysis"
+title: "Wearable Temperature Sensor for Paralyzed Veterans"
 date: 2024-04-30
 summary: "Wearable temperature-sensing device for real-time monitoring; led electronics + embedded systems work."
 heroImage: "images/projects/capstone/capstone-award-stage.jpeg"
